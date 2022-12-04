@@ -2,7 +2,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <parent>
         <groupId>com.lifelong.learning</groupId>
         <artifactId>lifelong-learning</artifactId>
@@ -10,10 +9,10 @@
         <relativePath/>
     </parent>
 
-    <artifactId>lifelong-learning-consumer</artifactId>
+    <artifactId>lifelong-learning-producer</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>lifelong-learning-consumer</name>
-    <description>Lifelong Learning Consumer</description>
+    <name>lifelong-learning-producer</name>
+    <description>lifelong-learning-producer</description>
     <properties>
         <java.version>8</java.version>
     </properties>
