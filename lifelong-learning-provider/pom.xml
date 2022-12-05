@@ -9,10 +9,10 @@
         <relativePath/>
     </parent>
 
-    <artifactId>lifelong-learning-producer</artifactId>
+    <artifactId>lifelong-learning-provider</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>lifelong-learning-producer</name>
-    <description>lifelong-learning-producer</description>
+    <name>lifelong-learning-provider</name>
+    <description>lifelong-learning-provider</description>
     <properties>
         <java.version>8</java.version>
     </properties>

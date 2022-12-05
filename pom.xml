@@ -7,7 +7,7 @@
     <modules>
         <module>./lifelong-learning-common</module>
         <module>./lifelong-learning-consumer</module>
-        <module>./lifelong-learning-producer</module>
+        <module>./lifelong-learning-provider</module>
     </modules>
 
     <parent>
