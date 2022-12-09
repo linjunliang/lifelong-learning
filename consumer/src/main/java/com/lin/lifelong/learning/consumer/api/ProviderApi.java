@@ -17,8 +17,8 @@ public interface ProviderApi {
 
     /**
      * feign 调用服务消费
-     * @param id
-     * @return
+     * @param id id
+     * @return {@link BaseVo}
      */
     @GetMapping("/provider/provide/{id}")
     BaseVo provide(@PathVariable Integer id);
