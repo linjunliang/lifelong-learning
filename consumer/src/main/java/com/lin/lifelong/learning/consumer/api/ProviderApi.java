@@ -17,6 +17,7 @@ public interface ProviderApi {
 
     /**
      * feign 调用服务消费
+     *
      * @param id id
      * @return {@link BaseVo}
      */

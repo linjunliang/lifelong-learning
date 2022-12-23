@@ -12,6 +12,7 @@ import java.util.Date;
 
 /**
  * 服务提供者接口
+ *
  * @author lin
  * @date 2022/4/10
  */
@@ -24,7 +25,7 @@ public class ProviderController {
     private String serverPort;
 
     @GetMapping("/provide/{id}")
-    public BaseVo provide(@PathVariable Integer id){
+    public BaseVo provide(@PathVariable Integer id) {
         String mess = String.format("provider【%s】 say hi to u !!!", this.serverPort);
         BaseVo result = new BaseVo();
         result.setId(id);

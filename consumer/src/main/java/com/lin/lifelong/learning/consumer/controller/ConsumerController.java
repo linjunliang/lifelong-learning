@@ -23,7 +23,7 @@ public class ConsumerController {
     private ProviderApi providerApi;
 
     @GetMapping("/{id}")
-    public BaseVo id(@PathVariable("id") Integer id){
+    public BaseVo id(@PathVariable("id") Integer id) {
         return providerApi.provide(id);
     }
 
