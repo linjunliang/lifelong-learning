@@ -1,7 +1,7 @@
-package com.lin.lifelong.learning.consumer.controller;
+package com.lifelong.learning.consumer.controller;
 
-import com.lin.lifelong.learning.common.beans.vo.BaseVo;
-import com.lin.lifelong.learning.consumer.api.ProviderApi;
+import com.lifelong.learning.common.beans.vo.BaseVo;
+import com.lifelong.learning.consumer.api.ProviderApi;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -1,4 +1,4 @@
-package com.lin.lifelong.learning.common.beans.vo;
+package com.lifelong.learning.common.beans.vo;
 
 import lombok.Data;
 

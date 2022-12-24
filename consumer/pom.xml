@@ -11,7 +11,7 @@
 
     <artifactId>lifelong-learning-consumer</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>lifelong-learning-consumer</name>
+    <name>llp-consumer</name>
     <description>Lifelong Learning Consumer</description>
     <properties>
         <java.version>8</java.version>

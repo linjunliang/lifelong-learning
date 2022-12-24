@@ -1,7 +1,7 @@
 
 spring:
   application:
-    name: lifelong-learning-consumer
+    name: llp-consumer
 
   cloud:
     nacos:

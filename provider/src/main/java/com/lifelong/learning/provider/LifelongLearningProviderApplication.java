@@ -1,4 +1,4 @@
-package com.lin.lifelong.learning.provider;
+package com.lifelong.learning.provider;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

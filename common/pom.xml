@@ -11,7 +11,7 @@
 
     <artifactId>lifelong-learning-common</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>lifelong-learning-common</name>
+    <name>llp-common</name>
     <description>lifelong-learning-common</description>
 
     <properties>

@@ -1,6 +1,6 @@
-package com.lin.lifelong.learning.provider.controller;
+package com.lifelong.learning.provider.controller;
 
-import com.lin.lifelong.learning.common.beans.vo.BaseVo;
+import com.lifelong.learning.common.beans.vo.BaseVo;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.GetMapping;

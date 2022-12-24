@@ -8,10 +8,10 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>lifelong-learning-provider</artifactId>
+    <artifactId>lifelong-learning-gateway</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>llp-provider</name>
-    <description>lifelong-learning-provider</description>
+    <name>llp-gateway</name>
+    <description>lifelong-learning-gateway</description>
     <properties>
         <java.version>8</java.version>
     </properties>
@@ -21,6 +21,17 @@
             <artifactId>lifelong-learning-common</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-alibaba-sentinel-gateway</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>

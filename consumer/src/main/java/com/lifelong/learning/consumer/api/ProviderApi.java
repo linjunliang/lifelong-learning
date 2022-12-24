@@ -1,6 +1,6 @@
-package com.lin.lifelong.learning.consumer.api;
+package com.lifelong.learning.consumer.api;
 
-import com.lin.lifelong.learning.common.beans.vo.BaseVo;
+import com.lifelong.learning.common.beans.vo.BaseVo;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
