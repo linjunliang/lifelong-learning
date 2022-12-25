@@ -4,13 +4,13 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.lifelong.learning</groupId>
-        <artifactId>lifelong-learning</artifactId>
+        <artifactId>life-long-study</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>lifelong-learning-gateway</artifactId>
+    <artifactId>lls-gateway</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>llp-gateway</name>
+    <name>lls-gateway</name>
     <description>lifelong-learning-gateway</description>
     <properties>
         <java.version>8</java.version>
@@ -18,8 +18,14 @@
     <dependencies>
         <dependency>
             <groupId>com.lifelong.learning</groupId>
-            <artifactId>lifelong-learning-common</artifactId>
+            <artifactId>lls-common</artifactId>
             <version>0.0.1-SNAPSHOT</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-web</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <dependency>
@@ -28,8 +34,13 @@
         </dependency>
 
         <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-alibaba-sentinel-gateway</artifactId>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-gateway</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba.csp</groupId>
+            <artifactId>sentinel-spring-cloud-gateway-adapter</artifactId>
         </dependency>
 
     </dependencies>

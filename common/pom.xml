@@ -5,14 +5,14 @@
 
     <parent>
         <groupId>com.lifelong.learning</groupId>
-        <artifactId>lifelong-learning</artifactId>
+        <artifactId>life-long-study</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>lifelong-learning-common</artifactId>
+    <artifactId>lls-common</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>llp-common</name>
-    <description>lifelong-learning-common</description>
+    <name>lls-common</name>
+    <description>lls-common</description>
 
     <properties>
         <java.version>8</java.version>

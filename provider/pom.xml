@@ -4,13 +4,13 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.lifelong.learning</groupId>
-        <artifactId>lifelong-learning</artifactId>
+        <artifactId>life-long-study</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>lifelong-learning-provider</artifactId>
+    <artifactId>lls-provider</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>llp-provider</name>
+    <name>lls-provider</name>
     <description>lifelong-learning-provider</description>
     <properties>
         <java.version>8</java.version>
@@ -18,9 +18,16 @@
     <dependencies>
         <dependency>
             <groupId>com.lifelong.learning</groupId>
-            <artifactId>lifelong-learning-common</artifactId>
+            <artifactId>lls-common</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.lifelong.learning</groupId>
+            <artifactId>lls-provider-api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
     </dependencies>
 
     <build>

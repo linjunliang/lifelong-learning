@@ -1,7 +1,7 @@
 
 spring:
   application:
-    name: llp-consumer
+    name: lls-consumer
 
   cloud:
     nacos:

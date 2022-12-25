@@ -2,9 +2,27 @@
 
 spring:
   application:
-    name: llp-gateway
+    name: lls-gateway
 
   cloud:
+
+    gateway:
+      discovery:
+        locator:
+          enabled: true   #允许不经过路由直接访问
+          lower-case-service-id: true  #允许服务名小写
+      routes:
+
+        - id: lls-provider
+          uri: lb://lls-provider
+          predicates:
+            - Path=/provider/**
+
+        - id: lls-consumer
+          uri: lb://lls-consumer
+          predicates:
+            - Path=/consumer/**
+
     nacos:
       discovery:
         server-addr: 127.0.0.1:8848
@@ -14,4 +32,7 @@ spring:
         enabled: true
         file-extension: yml
 
-        extension-configs: llp-gateway-route.yml
+#        extension-configs:
+#          - data-id: lls-gateway-route.yml
+#            refresh: true
+#            group: DEFAULT_GROUP

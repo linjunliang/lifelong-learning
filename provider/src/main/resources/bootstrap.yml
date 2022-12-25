@@ -2,7 +2,7 @@
 
 spring:
   application:
-    name: llp-provider
+    name: lls-provider
 
   cloud:
     nacos:

@@ -1,6 +1,7 @@
-package com.lifelong.learning.consumer.api;
+package com.lifelong.study.provider.api.service;
 
-import com.lifelong.learning.common.beans.vo.BaseVo;
+import com.lifelong.study.common.api.beans.vo.BaseVo;
+import com.lifelong.study.provider.api.beans.vo.ProviderApiVo;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -12,7 +13,7 @@ import org.springframework.web.bind.annotation.PathVariable;
  * @author: lin
  * @date: 2022/4/10
  */
-@FeignClient("lifelong-learning-provider")
+@FeignClient(name = "lls-provider", path = "/provider/api/v1")
 public interface ProviderApi {
 
     /**
@@ -21,6 +22,6 @@ public interface ProviderApi {
      * @param id id
      * @return {@link BaseVo}
      */
-    @GetMapping("/provider/provide/{id}")
-    BaseVo provide(@PathVariable Integer id);
+    @GetMapping("/provide/{id}")
+    ProviderApiVo provide(@PathVariable Integer id);
 }

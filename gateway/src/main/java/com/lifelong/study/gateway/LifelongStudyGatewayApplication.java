@@ -1,4 +1,4 @@
-package com.lifelong.learning;
+package com.lifelong.study.gateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -12,9 +12,9 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  */
 @EnableDiscoveryClient
 @SpringBootApplication
-public class LifelongLearningGatewayApplication {
+public class LifelongStudyGatewayApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(LifelongLearningGatewayApplication.class, args);
+        SpringApplication.run(LifelongStudyGatewayApplication.class, args);
     }
 }

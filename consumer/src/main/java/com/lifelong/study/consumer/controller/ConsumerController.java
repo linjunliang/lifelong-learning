@@ -1,7 +1,7 @@
-package com.lifelong.learning.consumer.controller;
+package com.lifelong.study.consumer.controller;
 
-import com.lifelong.learning.common.beans.vo.BaseVo;
-import com.lifelong.learning.consumer.api.ProviderApi;
+import com.lifelong.study.provider.api.service.ProviderApi;
+import com.lifelong.study.provider.api.beans.vo.ProviderApiVo;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,7 +23,7 @@ public class ConsumerController {
     private ProviderApi providerApi;
 
     @GetMapping("/{id}")
-    public BaseVo id(@PathVariable("id") Integer id) {
+    public ProviderApiVo id(@PathVariable("id") Integer id) {
         return providerApi.provide(id);
     }
 

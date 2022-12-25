@@ -9,35 +9,26 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>lls-consumer</artifactId>
+    <artifactId>lls-common-api</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>lls-consumer</name>
-    <description>Lifelong Learning Consumer</description>
+    <name>lls-common-api</name>
+    <description>lls-common-api</description>
+
     <properties>
         <java.version>8</java.version>
     </properties>
+
     <dependencies>
         <dependency>
-            <groupId>com.lifelong.learning</groupId>
-            <artifactId>lls-common</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>com.lifelong.learning</groupId>
-            <artifactId>lls-provider-api</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
 
     </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
 
 </project>
