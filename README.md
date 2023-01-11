@@ -23,3 +23,6 @@ SpringCloudAlibaba
 2. SpringCloudAlibaba 2.2.8.RELEASE
 3. SpringCloud Hoxton.SR12
 4. SpringBoot 2.3.12.RELEASE
+
+# 其他
+1. Gitee 同步到 Github 可以用Gitee的 管理->仓库镜像管理功能
