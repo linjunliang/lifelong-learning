@@ -12,3 +12,6 @@ spring:
         server-addr: 127.0.0.1:8848
         enabled: true
         file-extension: yml
+
+rocketmq:
+  name-server: 127.0.0.1:9876

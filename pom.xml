@@ -31,6 +31,7 @@
         <spring.cloud-version>Hoxton.SR12</spring.cloud-version>
         <spring.cloud.alibaba-version>2.2.8.RELEASE</spring.cloud.alibaba-version>
         <mybatis.plus-version>3.5.1</mybatis.plus-version>
+        <org.apache.rocketmq-version>2.2.2</org.apache.rocketmq-version>
     </properties>
 
     <dependencyManagement>
@@ -56,6 +57,12 @@
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-boot-starter</artifactId>
                 <version>${mybatis.plus-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.rocketmq</groupId>
+                <artifactId>rocketmq-spring-boot-starter</artifactId>
+                <version>${org.apache.rocketmq-version}</version>
             </dependency>
 
         </dependencies>
