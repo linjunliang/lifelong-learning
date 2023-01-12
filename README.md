@@ -26,3 +26,12 @@ SpringCloudAlibaba
 
 # 其他
 1. Gitee 同步到 Github 可以用Gitee的 管理->仓库镜像管理功能
+
+# 服务
+1. nacos: http://localhost:8848/nacos/index.html
+2. sentinel: http://localhost:8081/#/dashboard
+3. rocketmq-dashboard: http://localhost:8082/
+
+# 遗留问题
+1. 网关restful url的处理
+
