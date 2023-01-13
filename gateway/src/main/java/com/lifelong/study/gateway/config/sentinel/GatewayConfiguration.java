@@ -2,10 +2,10 @@ package com.lifelong.study.gateway.config.sentinel;
 
 import com.alibaba.csp.sentinel.adapter.gateway.sc.SentinelGatewayFilter;
 import com.alibaba.csp.sentinel.adapter.gateway.sc.exception.SentinelGatewayBlockExceptionHandler;
-import com.alibaba.csp.sentinel.adapter.spring.webflux.SentinelWebFluxFilter;
 import com.alibaba.csp.sentinel.adapter.spring.webflux.callback.WebFluxCallbackManager;
-import com.alibaba.csp.sentinel.adapter.spring.webflux.exception.SentinelBlockExceptionHandler;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang.math.NumberUtils;
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.cloud.gateway.filter.GlobalFilter;
 import org.springframework.context.annotation.Bean;
@@ -16,6 +16,7 @@ import org.springframework.http.codec.ServerCodecConfigurer;
 import org.springframework.web.reactive.result.view.ViewResolver;
 
 import javax.annotation.PostConstruct;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -32,21 +33,25 @@ public class GatewayConfiguration {
     private final List<ViewResolver> viewResolvers;
     private final ServerCodecConfigurer serverCodecConfigurer;
 
-    public GatewayConfiguration(ObjectProvider<List<ViewResolver>> viewResolversProvider,
-                                ServerCodecConfigurer serverCodecConfigurer) {
+    private final String URL_SPLIT = "/";
+    private final String RESTFUL_NUMBER_STRING = "{number}";
+
+    public GatewayConfiguration(ObjectProvider<List<ViewResolver>> viewResolversProvider, ServerCodecConfigurer serverCodecConfigurer) {
         this.viewResolvers = viewResolversProvider.getIfAvailable(Collections::emptyList);
         this.serverCodecConfigurer = serverCodecConfigurer;
     }
 
     @PostConstruct
-    public void init(){
+    public void init() {
         WebFluxCallbackManager.setUrlCleaner((webExchange, originalUrl) -> {
-
-            System.out.println(webExchange);
-            System.out.println(originalUrl);
-
-            log.info(originalUrl);
-            return originalUrl;
+            //总之就是要把Restful的URL统一的 返回一个固定参数
+            String[] splits = originalUrl.split(URL_SPLIT);
+            return Arrays.stream(splits).map(string -> {
+                if (NumberUtils.isNumber(string)) {
+                    return RESTFUL_NUMBER_STRING;
+                }
+                return string;
+            }).reduce((a, b) -> a + URL_SPLIT + b).orElse(StringUtils.EMPTY);
         });
     }
 
