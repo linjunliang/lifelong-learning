@@ -16,6 +16,7 @@ import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
 import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
+import java.util.Date;
 import java.util.Iterator;
 
 /**
@@ -24,7 +25,14 @@ import java.util.Iterator;
  * @date 2020/12/3
  */
 public class NioServer {
+
     private Selector selector;
+
+    public static void main(String[] args) throws Exception {
+        NioServer server = new NioServer();
+        server.init();
+        server.start();
+    }
 
     public void init() throws IOException {
         // 创建一个选择器
@@ -88,17 +96,11 @@ public class NioServer {
         // trim方法用于删除字符串两边的空格字符串
         String request = new String(buffer.array()).trim();
         System.out.println("抢票客户的请求" + request);
-        String outString = String.format("数据【%s】请求成功！！！\n", request);
+        String outString = String.format("数据【%s】请求成功 时间：%s！！！", request, new Date());
         ByteBuffer outBuffer = ByteBuffer.wrap(outString.getBytes());
         // 把我们的数据返回给通道（抢到票了）
         channel.write(outBuffer);
 
 //        channel.close();
-    }
-
-    public static void main(String[] args) throws Exception {
-        NioServer server = new NioServer();
-        server.init();
-        server.start();
     }
 }
