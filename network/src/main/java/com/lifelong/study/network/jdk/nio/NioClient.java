@@ -1,6 +1,6 @@
 package com.lifelong.study.network.jdk.nio;
 
-import com.lifelong.study.network.jdk.nio.constant.NioConst;
+import com.lifelong.study.network.constant.NioConst;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;

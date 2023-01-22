@@ -1,4 +1,4 @@
-package com.lifelong.study.network.jdk.nio.constant;
+package com.lifelong.study.network.constant;
 
 /**
  * Nio常量

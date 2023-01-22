@@ -6,7 +6,7 @@ package com.lifelong.study.network.jdk.nio;
  * @author: lin
  * @date: 2023/1/15
  */
-import com.lifelong.study.network.jdk.nio.constant.NioConst;
+import com.lifelong.study.network.constant.NioConst;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
