@@ -20,3 +20,8 @@ rocketmq:
   producer:
     #生产者组名，规定在一个应用里面必须唯一
     group: ${spring.application.name}
+
+logging:
+  config: classpath:logging-spring.xml
+  file:
+    path: ./log
