@@ -35,3 +35,5 @@ SpringCloudAlibaba
 # 遗留问题
 1. 网关restful url的处理
 
+# Idea Vim 配置
+:set nu | set ts=4 设置tab和行号
