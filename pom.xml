@@ -32,6 +32,7 @@
         <spring.cloud-version>Hoxton.SR12</spring.cloud-version>
         <spring.cloud.alibaba-version>2.2.8.RELEASE</spring.cloud.alibaba-version>
         <mybatis.plus-version>3.5.1</mybatis.plus-version>
+        <org.mapstruct.version>1.5.3.Final</org.mapstruct.version>
     </properties>
 
     <dependencyManagement>
@@ -57,6 +58,12 @@
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-boot-starter</artifactId>
                 <version>${mybatis.plus-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct</artifactId>
+                <version>${org.mapstruct.version}</version>
             </dependency>
 
         </dependencies>
