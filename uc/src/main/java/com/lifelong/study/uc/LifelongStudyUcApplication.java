@@ -10,7 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author: lin
  * @date: 2023/3/4
  */
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"com.lifelong.study.uc", "com.lifelong.study.common.config"})
 @MapperScan(basePackages = {"com.lifelong.study.uc.*.mapper"})
 public class LifelongStudyUcApplication {
 

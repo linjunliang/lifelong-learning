@@ -1,9 +1,8 @@
 package com.lifelong.study.common.pojo.entity;
 
+import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableField;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
@@ -19,15 +18,18 @@ public class BaseEntity {
     @TableField
     private Integer id;
 
-    @TableField
+    @TableField(fill = FieldFill.INSERT)
     private LocalDateTime createTime;
 
-    @TableField
-    private String creator;
+    @TableField(fill = FieldFill.INSERT)
+    private String createUser;
 
-    @TableField
+    @TableField(fill = FieldFill.INSERT_UPDATE)
     private LocalDateTime updateTime;
 
+    @TableField(fill = FieldFill.INSERT_UPDATE)
+    private String updateUser;
+
     @TableField
-    private String updater;
+    private Integer isDeleted;
 }

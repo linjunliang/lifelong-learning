@@ -1,8 +1,6 @@
 package com.lifelong.study.common.pojo.dto;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -22,10 +20,12 @@ public class BaseDTO implements Serializable {
 
     private LocalDateTime createTime;
 
-    private String creator;
+    private String createUser;
 
     private LocalDateTime updateTime;
 
-    private String updater;
+    private String updateUser;
+
+    private Integer isDeleted;
 
 }

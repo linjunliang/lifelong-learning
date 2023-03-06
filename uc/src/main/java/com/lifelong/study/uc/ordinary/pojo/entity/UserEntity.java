@@ -3,8 +3,7 @@ package com.lifelong.study.uc.ordinary.pojo.entity;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.lifelong.study.common.pojo.entity.BaseEntity;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
+import lombok.*;
 
 /**
  * 一般用户
@@ -14,6 +13,9 @@ import lombok.EqualsAndHashCode;
  */
 @EqualsAndHashCode(callSuper = true)
 @Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @TableName("uc_user")
 public class UserEntity extends BaseEntity {
 

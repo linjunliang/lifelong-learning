@@ -5,6 +5,8 @@ import com.lifelong.study.uc.ordinary.pojo.entity.UserEntity;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
+import java.util.List;
+
 /**
  * 用户MapStruct映射mapper
  *
@@ -22,5 +24,12 @@ public interface UserConverter {
      * @return {@link UserDTO}
      */
     UserDTO entity2Dto(UserEntity entity);
+
+    /**
+     * list entity 转 dto
+     * @param entities list
+     * @return DtoList
+     */
+    List<UserDTO> entity2Dto(List<UserEntity> entities);
 
 }

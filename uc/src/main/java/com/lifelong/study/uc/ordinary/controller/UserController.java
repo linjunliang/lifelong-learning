@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * 用户controller
@@ -26,7 +26,25 @@ public class UserController {
     private UserService userService;
 
     @GetMapping("/list")
-    public List<UserDTO> list(){
-        return userService.list().stream().map(UserConverter.INSTANCE::entity2Dto).collect(Collectors.toList());
+    public List<UserDTO> list() {
+        return UserConverter.INSTANCE.entity2Dto(userService.list());
+    }
+
+    @GetMapping("/save")
+    public void save() {
+        int size = 10;
+        List<UserEntity> userEntities = new ArrayList<>(size);
+
+        for (int i = 0; i < size; i++) {
+            UserEntity user = UserEntity.builder()
+                    .username("user" + i)
+                    .pwd("pwd" + i)
+                    .build();
+
+            userEntities.add(user);
+        }
+
+        userService.saveBatch(userEntities);
+
     }
 }
